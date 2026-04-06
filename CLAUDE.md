@@ -21,7 +21,7 @@ ansible-playbook playbooks/provision_malbox.yml --check
 # Run specific roles
 ansible-playbook playbooks/provision_malbox.yml --tags malbox_network
 
-# Override YARA tier (core | standard | extended)
+# Override YARA tier (core | extended | full)
 ansible-playbook playbooks/provision_malbox.yml -e malbox_yara_forge_tier=core
 
 # Lint

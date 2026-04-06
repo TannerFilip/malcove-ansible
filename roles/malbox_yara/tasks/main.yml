@@ -22,7 +22,7 @@
   ansible.builtin.unarchive:
     src: >-
       https://github.com/YARAHQ/yara-forge/releases/download/{{ __malbox_yara_forge_tag
-      }}/yara-forge-rule-set-{{ malbox_yara_forge_tier }}.zip
+      }}/yara-forge-rules-{{ malbox_yara_forge_tier }}.zip
     dest: "{{ malbox_yara_install_dir }}/yara-rules/yaraforge"
     remote_src: true
   tags: malbox_yara
