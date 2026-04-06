@@ -5,3 +5,4 @@ __malbox_network_packages:
   - nmap
   - whois
   - dnsutils
+  - libnetfilter-queue-dev
