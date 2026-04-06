@@ -1,0 +1,9 @@
+---
+- name: malbox_reverse_engineering | Install RE apt packages
+  ansible.builtin.import_tasks: apt.yml
+
+- name: malbox_reverse_engineering | Install capa
+  ansible.builtin.import_tasks: capa.yml
+
+- name: malbox_reverse_engineering | Install Detect-It-Easy
+  ansible.builtin.import_tasks: die.yml

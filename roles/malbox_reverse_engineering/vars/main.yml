@@ -1,0 +1,10 @@
+---
+__malbox_reverse_engineering_apt_packages:
+  - binwalk
+  - libimage-exiftool-perl
+  - ssdeep
+  - radare2
+  - upx-ucl
+  - yara
+  - strace
+  - ltrace

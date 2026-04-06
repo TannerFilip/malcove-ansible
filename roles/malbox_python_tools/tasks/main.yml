@@ -1,0 +1,13 @@
+---
+- name: malbox_python_tools | Install Python build dependencies
+  ansible.builtin.apt:
+    name: "{{ __malbox_python_tools_apt_packages }}"
+    state: present
+  tags: malbox_python_tools
+
+- name: malbox_python_tools | Install Python analysis libraries
+  ansible.builtin.pip:
+    name: "{{ __malbox_python_tools_pip_packages }}"
+    executable: pip3
+    extra_args: "--break-system-packages --no-cache-dir"
+  tags: malbox_python_tools

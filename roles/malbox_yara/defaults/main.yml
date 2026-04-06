@@ -1,0 +1,3 @@
+---
+malbox_yara_install_dir: /opt
+malbox_yara_forge_tier: extended

@@ -1,0 +1,14 @@
+---
+# Provision a mal-box malware analysis workstation.
+# See README.md for usage examples and variable reference.
+- name: Provision mal-box
+  hosts: all
+  become: true
+  roles:
+    - malbox_base
+    - malbox_network
+    - malbox_reverse_engineering
+    - malbox_python_tools
+    - malbox_node_tools
+    - malbox_document_analysis
+    - malbox_yara

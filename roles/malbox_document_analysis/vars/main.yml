@@ -1,0 +1,5 @@
+---
+__malbox_document_analysis_tools:
+  - pdfid.py
+  - pdf-parser.py
+  - oledump.py
