@@ -1,19 +1,18 @@
 ---
-- name: malbox_node_tools | Install nvm
-  ansible.builtin.shell:
-    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v{{ malbox_node_tools_nvm_version }}/install.sh | bash
-    creates: /root/.nvm/nvm.sh
-  tags: malbox_node_tools
-
-- name: malbox_node_tools | Install Node.js {{ malbox_node_tools_node_version }} via nvm
-  ansible.builtin.shell:
-    cmd: source /root/.nvm/nvm.sh && nvm install {{ malbox_node_tools_node_version }} && nvm alias default {{ malbox_node_tools_node_version }}
-    executable: /bin/bash
+- name: malbox_node_tools | Install nvm and Node.js via ansible-role-nvm
+  ansible.builtin.include_role:
+    name: morgangraphics.ansible_role_nvm
+  vars:
+    nvm_version: "{{ malbox_node_tools_nvm_version }}"
+    nodejs_version: "{{ malbox_node_tools_node_version }}"
+    nvm_install: curl
+  become_user: "{{ malbox_node_tools_user }}"
   tags: malbox_node_tools
 
 - name: malbox_node_tools | Install JavaScript analysis tools
   ansible.builtin.shell:
-    cmd: source /root/.nvm/nvm.sh && npm install -g {{ item }}
+    cmd: source $HOME/.nvm/nvm.sh && npm install -g {{ item }}
     executable: /bin/bash
+  become_user: "{{ malbox_node_tools_user }}"
   loop: "{{ __malbox_node_tools_npm_packages }}"
   tags: malbox_node_tools
