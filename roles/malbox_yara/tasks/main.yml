@@ -1,24 +1,24 @@
 ---
-- name: malbox_yara | Get latest YARA Forge release info
+- name: Malbox_yara | Get latest YARA Forge release info
   ansible.builtin.uri:
     url: https://api.github.com/repos/YARAHQ/yara-forge/releases/latest
     return_content: true
   register: __malbox_yara_forge_release
   tags: malbox_yara
 
-- name: malbox_yara | Set YARA Forge version fact
+- name: Malbox_yara | Set YARA Forge version fact
   ansible.builtin.set_fact:
     __malbox_yara_forge_tag: "{{ (__malbox_yara_forge_release.content | from_json).tag_name }}"
   tags: malbox_yara
 
-- name: malbox_yara | Create YARA rules directory
+- name: Malbox_yara | Create YARA rules directory
   ansible.builtin.file:
     path: "{{ malbox_yara_install_dir }}/yara-rules/yaraforge"
     state: directory
     mode: "0755"
   tags: malbox_yara
 
-- name: "malbox_yara | Download YARA Forge {{ malbox_yara_forge_tier }} ruleset"
+- name: "Malbox_yara | Download YARA Forge ruleset - {{ malbox_yara_forge_tier }}"
   ansible.builtin.unarchive:
     src: >-
       https://github.com/YARAHQ/yara-forge/releases/download/{{ __malbox_yara_forge_tag
@@ -27,7 +27,7 @@
     remote_src: true
   tags: malbox_yara
 
-- name: malbox_yara | Report YARA Forge install location
+- name: Malbox_yara | Report YARA Forge install location
   ansible.builtin.debug:
     msg: >-
       YARA Forge {{ malbox_yara_forge_tier }} ({{ __malbox_yara_forge_tag }})

@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  author: TannerFilip
   role_name: malbox_document_analysis
   description: Install Didier Stevens document analysis tools (pdfid, pdf-parser, oledump).
   license: MIT

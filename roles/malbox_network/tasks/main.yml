@@ -1,5 +1,5 @@
 ---
-- name: malbox_network | Install network analysis tools
+- name: Malbox_network | Install network analysis tools
   ansible.builtin.apt:
     name: "{{ __malbox_network_packages }}"
     state: present

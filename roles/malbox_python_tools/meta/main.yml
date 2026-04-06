@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  author: TannerFilip
   role_name: malbox_python_tools
   description: Install Python build dependencies and malware analysis libraries via pip.
   license: MIT

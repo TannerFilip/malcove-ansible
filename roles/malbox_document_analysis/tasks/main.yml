@@ -1,12 +1,12 @@
 ---
-- name: malbox_document_analysis | Create Didier Stevens install directory
+- name: Malbox_document_analysis | Create Didier Stevens install directory
   ansible.builtin.file:
     path: "{{ malbox_document_analysis_install_dir }}/didier"
     state: directory
     mode: "0755"
   tags: malbox_document_analysis
 
-- name: malbox_document_analysis | Download Didier Stevens tools
+- name: Malbox_document_analysis | Download Didier Stevens tools
   ansible.builtin.get_url:
     url: "{{ malbox_document_analysis_didier_base_url }}/{{ item }}"
     dest: "{{ malbox_document_analysis_install_dir }}/didier/{{ item }}"
@@ -14,7 +14,7 @@
   loop: "{{ __malbox_document_analysis_tools }}"
   tags: malbox_document_analysis
 
-- name: malbox_document_analysis | Symlink Didier Stevens tools to /usr/local/bin
+- name: Malbox_document_analysis | Symlink Didier Stevens tools to /usr/local/bin
   ansible.builtin.file:
     src: "{{ malbox_document_analysis_install_dir }}/didier/{{ item }}"
     dest: "/usr/local/bin/{{ item | regex_replace('\\.py$', '') }}"

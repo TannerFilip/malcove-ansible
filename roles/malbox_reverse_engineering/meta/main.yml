@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  author: TannerFilip
   role_name: malbox_reverse_engineering
   description: Install RE and static analysis tools (apt packages, capa, Detect-It-Easy) for a malware analysis workstation.
   license: MIT

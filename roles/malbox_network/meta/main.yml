@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  author: TannerFilip
   role_name: malbox_network
   description: Install network analysis tools for a malware analysis workstation.
   license: MIT

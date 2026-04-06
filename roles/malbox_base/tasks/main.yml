@@ -1,17 +1,17 @@
 ---
-- name: malbox_base | Update apt cache
+- name: Malbox_base | Update apt cache
   ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 3600
   tags: always
 
-- name: malbox_base | Install base utilities
+- name: Malbox_base | Install base utilities
   ansible.builtin.apt:
     name: "{{ __malbox_base_packages }}"
     state: present
   tags: malbox_base
 
-- name: malbox_base | Symlink batcat to bat
+- name: Malbox_base | Symlink batcat to bat
   ansible.builtin.file:
     src: /usr/bin/batcat
     dest: /usr/local/bin/bat
@@ -19,7 +19,7 @@
     force: true
   tags: malbox_base
 
-- name: malbox_base | Configure shell aliases and PATH
+- name: Malbox_base | Configure shell aliases and PATH
   ansible.builtin.blockinfile:
     path: "{{ malbox_base_bashrc_path }}"
     marker: "# {mark} mal-box aliases"

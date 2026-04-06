@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  author: TannerFilip
   role_name: malbox_node_tools
   description: Install Node.js and JavaScript analysis tools via npm for a malware analysis workstation.
   license: MIT

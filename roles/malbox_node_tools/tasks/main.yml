@@ -1,11 +1,11 @@
 ---
-- name: malbox_node_tools | Install Node.js and npm
+- name: Malbox_node_tools | Install Node.js and npm
   ansible.builtin.apt:
     name: "{{ __malbox_node_tools_apt_packages }}"
     state: present
   tags: malbox_node_tools
 
-- name: malbox_node_tools | Install JavaScript analysis tools
+- name: Malbox_node_tools | Install JavaScript analysis tools
   community.general.npm:
     name: "{{ item }}"
     global: true
