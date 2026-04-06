@@ -12,9 +12,9 @@
     extra_args: "--break-system-packages --no-cache-dir"
   tags: malbox_python_tools
 
-- name: malbox_python_tools | Install fakenet-ng from GitHub
-  ansible.builtin.pip:
-    name: https://github.com/mandiant/flare-fakenet-ng/zipball/master
-    executable: pip3
-    extra_args: "--break-system-packages --no-cache-dir"
-  tags: malbox_python_tools
+# - name: malbox_python_tools | Install fakenet-ng from GitHub
+#   ansible.builtin.pip:
+#     name: https://github.com/mandiant/flare-fakenet-ng/zipball/master
+#     executable: pip3
+#     extra_args: "--break-system-packages --no-cache-dir"
+#   tags: malbox_python_tools
