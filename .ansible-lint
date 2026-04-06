@@ -1,0 +1,13 @@
+---
+profile: production
+
+loop_var_prefix: "^(__|malbox_)"
+var_naming_pattern: "^[a-z_][a-z0-9_]*$"
+
+warn_list:
+  - git-latest
+  - package-latest
+  - risky-file-permissions
+  - template-instead-of-copy
+
+task_name_prefix: "{stem} | "

@@ -1,0 +1,3 @@
+---
+malbox_base_install_dir: /opt
+malbox_base_bashrc_path: /root/.bashrc

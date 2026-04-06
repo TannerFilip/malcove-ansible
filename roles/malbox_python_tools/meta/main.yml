@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  role_name: malbox_python_tools
+  description: Install Python build dependencies and malware analysis libraries via pip.
+  license: MIT
+  min_ansible_version: "2.14"
+  platforms:
+    - name: Ubuntu
+      versions: all
+    - name: Debian
+      versions: all
+dependencies: []

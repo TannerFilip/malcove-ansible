@@ -1,0 +1,21 @@
+---
+__malbox_base_packages:
+  - curl
+  - wget
+  - git
+  - vim
+  - nano
+  - tmux
+  - ripgrep
+  - bat
+  - jq
+  - libxml2-utils
+  - xxd
+  - file
+  - unzip
+  - p7zip-full
+  - cabextract
+  - unrar-free
+  - build-essential
+  - ca-certificates
+  - gnupg

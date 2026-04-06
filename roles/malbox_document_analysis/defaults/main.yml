@@ -1,0 +1,4 @@
+---
+malbox_document_analysis_install_dir: /opt
+malbox_document_analysis_didier_base_url: >-
+  https://raw.githubusercontent.com/DidierStevens/DidierStevensSuite/master

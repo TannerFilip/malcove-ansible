@@ -1,0 +1,7 @@
+---
+__malbox_network_packages:
+  - tcpdump
+  - tshark
+  - nmap
+  - whois
+  - dnsutils

@@ -1,0 +1,6 @@
+---
+- name: sub | Install RE and static analysis apt packages
+  ansible.builtin.apt:
+    name: "{{ __malbox_reverse_engineering_apt_packages }}"
+    state: present
+  tags: malbox_reverse_engineering

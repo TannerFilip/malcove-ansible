@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  role_name: malbox_node_tools
+  description: Install Node.js and JavaScript analysis tools via npm for a malware analysis workstation.
+  license: MIT
+  min_ansible_version: "2.14"
+  platforms:
+    - name: Ubuntu
+      versions: all
+    - name: Debian
+      versions: all
+dependencies: []

@@ -1,0 +1,9 @@
+---
+__malbox_node_tools_apt_packages:
+  - nodejs
+  - npm
+
+__malbox_node_tools_npm_packages:
+  - webcrack
+  - box-js
+  - js-beautify

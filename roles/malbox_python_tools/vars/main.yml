@@ -1,0 +1,30 @@
+---
+__malbox_python_tools_apt_packages:
+  - python3-dev
+  - python3-magic
+  - libssl-dev
+  - libffi-dev
+
+__malbox_python_tools_pip_packages:
+  # PE / binary
+  - pefile
+  - lief
+  # crypto
+  - pycryptodome
+  # disassembly / emulation
+  - capstone
+  - unicorn
+  - ropper
+  # fuzzy hashing
+  - python-tlsh
+  # network simulation
+  - fakenet-ng
+  # document analysis
+  - oletools
+  # OSINT
+  - dnstwist
+  - requests
+  # XOR analysis
+  - xortool
+  # YARA bindings
+  - yara-python
