@@ -1,19 +1,8 @@
 ---
-- name: malbox_node_tools | Install nvm
-  ansible.builtin.shell:
-    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v{{ malbox_node_tools_nvm_version }}/install.sh | bash
-    creates: /root/.nvm/nvm.sh
-  tags: malbox_node_tools
-
-- name: malbox_node_tools | Install Node.js {{ malbox_node_tools_node_version }} via nvm
-  ansible.builtin.shell:
-    cmd: source /root/.nvm/nvm.sh && nvm install {{ malbox_node_tools_node_version }} && nvm alias default {{ malbox_node_tools_node_version }}
-    executable: /bin/bash
-  tags: malbox_node_tools
-
-- name: malbox_node_tools | Install JavaScript analysis tools
-  ansible.builtin.shell:
-    cmd: source /root/.nvm/nvm.sh && npm install -g {{ item }}
-    executable: /bin/bash
-  loop: "{{ __malbox_node_tools_npm_packages }}"
+- name: malbox_node_tools | Install Node.js via geerlingguy.nodejs
+  ansible.builtin.include_role:
+    name: geerlingguy.nodejs
+  vars:
+    nodejs_version: "{{ malbox_node_tools_node_version }}"
+    nodejs_npm_global_packages: "{{ __malbox_node_tools_npm_packages }}"
   tags: malbox_node_tools

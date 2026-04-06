@@ -1,3 +1,2 @@
 ---
-malbox_node_tools_nvm_version: "0.40.4"
-malbox_node_tools_node_version: "22"
+malbox_node_tools_node_version: "22.x"
