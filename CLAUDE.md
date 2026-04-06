@@ -51,6 +51,8 @@ The canonical entry point is `playbooks/provision_malbox.yml`, which runs 7 role
 |---|---|---|
 | `malbox_base_install_dir` | `/opt` | malbox_base |
 | `malbox_base_bashrc_path` | `/root/.bashrc` | malbox_base |
+| `malbox_node_tools_nvm_version` | `0.40.4` | malbox_node_tools |
+| `malbox_node_tools_node_version` | `22` | malbox_node_tools |
 | `malbox_yara_forge_tier` | `extended` | malbox_yara |
 | `malbox_yara_install_dir` | `/opt` | malbox_yara |
 
