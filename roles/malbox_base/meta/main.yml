@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  author: TannerFilip
   role_name: malbox_base
   description: Install base system utilities and configure shell for a malware analysis workstation.
   license: MIT

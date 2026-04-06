@@ -1,18 +1,18 @@
 ---
-- name: sub | Get latest capa release info
+- name: Sub | Get latest capa release info
   ansible.builtin.uri:
     url: https://api.github.com/repos/mandiant/capa/releases/latest
     return_content: true
   register: __malbox_reverse_engineering_capa_release
   tags: malbox_reverse_engineering
 
-- name: sub | Set capa version fact
+- name: Sub | Set capa version fact
   ansible.builtin.set_fact:
     __malbox_reverse_engineering_capa_version: >-
       {{ (__malbox_reverse_engineering_capa_release.content | from_json).tag_name }}
   tags: malbox_reverse_engineering
 
-- name: sub | Download and extract capa binary
+- name: Sub | Download and extract capa binary
   ansible.builtin.unarchive:
     src: >-
       https://github.com/mandiant/capa/releases/download/{{ __malbox_reverse_engineering_capa_version
@@ -21,7 +21,7 @@
     remote_src: true
   tags: malbox_reverse_engineering
 
-- name: sub | Install capa to /usr/local/bin
+- name: Sub | Install capa to /usr/local/bin
   ansible.builtin.copy:
     src: /tmp/capa
     dest: /usr/local/bin/capa

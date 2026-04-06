@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  author: TannerFilip
   role_name: malbox_yara
   description: Download and install YARA Forge community rulesets.
   license: MIT
