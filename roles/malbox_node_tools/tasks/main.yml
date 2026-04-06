@@ -4,5 +4,6 @@
     name: geerlingguy.nodejs
   vars:
     nodejs_version: "{{ malbox_node_tools_node_version }}"
+    nodejs_install_npm_user: root
     nodejs_npm_global_packages: "{{ __malbox_node_tools_npm_packages }}"
   tags: malbox_node_tools
