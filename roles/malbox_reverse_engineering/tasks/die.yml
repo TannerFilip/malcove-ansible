@@ -23,7 +23,7 @@
   ansible.builtin.unarchive:
     src: >-
       https://github.com/horsicq/DIE-engine/releases/download/{{ __malbox_reverse_engineering_die_version
-      }}/die_lin64_portable_{{ __malbox_reverse_engineering_die_version }}.tar.gz
+      }}/die_{{ __malbox_reverse_engineering_die_version }}_portable_Ubuntu_20.04_amd64.tar.gz
     dest: "{{ malbox_reverse_engineering_install_dir }}/die"
     remote_src: true
     extra_opts:

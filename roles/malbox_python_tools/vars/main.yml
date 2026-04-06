@@ -17,8 +17,6 @@ __malbox_python_tools_pip_packages:
   - ropper
   # fuzzy hashing
   - python-tlsh
-  # network simulation
-  - fakenet-ng
   # document analysis
   - oletools
   # OSINT

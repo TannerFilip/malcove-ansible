@@ -1,3 +1,4 @@
 ---
 malbox_yara_install_dir: /opt
+# Valid tiers: core, extended, full
 malbox_yara_forge_tier: extended
